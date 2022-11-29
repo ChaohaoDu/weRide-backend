@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://us-east.connect.psdb.cloud/weride?sslMode=VERIFY_IDENTITY
+    username: j2ot1d2n0mzyd249oihl
+    password: pscale_pw_h8glJaNAfMnBWnhMDD0zP3hhbOcDMGAjPQGkD5V7mCs
+    hikari:
+      max-lifetime: 600000
+  data:
+    rest:
+      base-path: /api
+  mail:
+    host: smtp.gmail.com
+    username: WeRideApplication@gmail.com
+    password: hmkvvmgheqiwvrji
+    port: 587
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+          required: true
+
+mybatis:
+  type-aliases-package: come.weride.model
+  mapper-locations: classpath:mapper/*.xml
+
+allowed:
+  origins: http://localhost:4200
